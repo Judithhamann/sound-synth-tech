@@ -605,6 +605,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 534.0, 313.0, 91.0, 36.0 ],
+					"presentation_linecount" : 2,
 					"text" : "setdomain 1500."
 				}
 
@@ -642,6 +643,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 102.0, 306.0, 150.0, 89.0 ],
+					"presentation_linecount" : 6,
 					"text" : "range\n\n\n\n\n0"
 				}
 
@@ -688,6 +690,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 357.0, 325.0, 150.0, 62.0 ],
+					"presentation_linecount" : 4,
 					"text" : "A attack\nD decay\nS sustain\nR release"
 				}
 
