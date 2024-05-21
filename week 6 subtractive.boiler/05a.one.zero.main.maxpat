@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 31.680469862363552,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 588.0, 273.0, 336.0, 45.0 ],
+					"text" : "05.one.zero.filter-Kopie"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-90",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -185,18 +198,6 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 584.0, 181.0, 74.0, 22.0 ],
 					"text" : "receive~ in1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 34.511490573468372,
-					"id" : "obj-66",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 584.0, 267.0, 266.0, 48.0 ],
-					"text" : "05.one.zero.filter"
 				}
 
 			}
@@ -512,6 +513,43 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 1 ],
+					"source" : [ "obj-69", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"order" : 1,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-65", 0 ],
+					"order" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 2 ],
+					"source" : [ "obj-71", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-69", 0 ],
 					"order" : 1,
 					"source" : [ "obj-72", 0 ]
@@ -529,6 +567,7 @@
  ],
 		"parameters" : 		{
 			"obj-23" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-7::obj-23" : [ "live.gain~[1]", "live.gain~", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -538,11 +577,18 @@
 
 			}
 ,
+			"parameter_overrides" : 			{
+				"obj-7::obj-23" : 				{
+					"parameter_longname" : "live.gain~[1]"
+				}
+
+			}
+,
 			"inherited_shortname" : 1
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "05.one.zero.filter.maxpat",
+				"name" : "05.one.zero.filter-Kopie.maxpat",
 				"bootpath" : "~/Documents/Max 8/sound-synth-tech SS2024/week 6 subtractive.boiler",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
