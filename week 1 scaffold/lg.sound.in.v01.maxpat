@@ -1083,14 +1083,6 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 110.5, 63.0, 87.0, 63.0, 87.0, 237.0, 110.5, 237.0 ],
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "273177__xserra__la-vaca-cega-eva.wav",
