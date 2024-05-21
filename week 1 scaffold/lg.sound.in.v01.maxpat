@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 39.0, 88.0, 1213.0, 570.0 ],
+		"rect" : [ 39.0, 88.0, 813.0, 570.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -381,15 +381,76 @@
 , 			{
 				"box" : 				{
 					"basictuning" : 0,
+					"clipheight" : 31.799999999999997,
 					"data" : 					{
-						"clips" : [  ]
+						"clips" : [ 							{
+								"absolutepath" : "C:\\Users\\Admin\\Documents\\Max 8\\sound-synth-tech SS2024\\week 1 scaffold\\synth-tech-media-master\\speech\\273177__xserra__la-vaca-cega-eva.wav",
+								"filename" : "273177__xserra__la-vaca-cega-eva.wav",
+								"filekind" : "audiofile",
+								"id" : "u292000326",
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 0,
+								"content_state" : 								{
+
+								}
+
+							}
+, 							{
+								"absolutepath" : "C:\\Users\\Admin\\Documents\\Max 8\\sound-synth-tech SS2024\\week 1 scaffold\\synth-tech-media-master\\speech\\431165__inspectorj__voice-request-32-okay-chief-ch.wav",
+								"filename" : "431165__inspectorj__voice-request-32-okay-chief-ch.wav",
+								"filekind" : "audiofile",
+								"id" : "u992000339",
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 0,
+								"content_state" : 								{
+
+								}
+
+							}
+, 							{
+								"absolutepath" : "C:\\Users\\Admin\\Documents\\Max 8\\sound-synth-tech SS2024\\week 1 scaffold\\synth-tech-media-master\\speech\\345836__krzysiunet__im-not-speaking-english.wav",
+								"filename" : "345836__krzysiunet__im-not-speaking-english.wav",
+								"filekind" : "audiofile",
+								"id" : "u889000347",
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 0,
+								"content_state" : 								{
+
+								}
+
+							}
+, 							{
+								"absolutepath" : "C:\\Users\\Admin\\Documents\\Max 8\\sound-synth-tech SS2024\\week 1 scaffold\\synth-tech-media-master\\speech\\476652__inspectorj__request-40-open-the-door.wav",
+								"filename" : "476652__inspectorj__request-40-open-the-door.wav",
+								"filekind" : "audiofile",
+								"id" : "u037000343",
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 0,
+								"content_state" : 								{
+
+								}
+
+							}
+, 							{
+								"absolutepath" : "C:\\Users\\Admin\\Documents\\Max 8\\sound-synth-tech SS2024\\week 1 scaffold\\synth-tech-media-master\\speech\\400909__inspectorj__voice-request-25-where-i-am.wav",
+								"filename" : "400909__inspectorj__voice-request-25-where-i-am.wav",
+								"filekind" : "audiofile",
+								"id" : "u490000335",
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 0,
+								"content_state" : 								{
+
+								}
+
+							}
+ ]
 					}
 ,
 					"followglobaltempo" : 0,
 					"formantcorrection" : 0,
 					"id" : "obj-65",
 					"maxclass" : "playlist~",
-					"mode" : 0,
+					"mode" : "basic",
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"originallength" : [ 0 ],
@@ -398,7 +459,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 394.0, 317.0, 226.0, 164.0 ],
 					"pitchcorrection" : 0,
-					"quality" : 0,
+					"quality" : "basic",
 					"timestretch" : [ 0 ]
 				}
 
@@ -831,7 +892,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"items" : "<empty>",
+					"items" : [ "off", ",", "microphone", ",", "soundfile", ",", "noise", ",", "click", ",", "sine" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -872,7 +933,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 162.0, 120.0, 45.0, 48.0 ],
+					"patching_rect" : [ 162.0, 120.0, 48.0, 48.0 ],
 					"text" : "<i> \nmeans integer"
 				}
 
@@ -1001,6 +1062,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 110.5, 108.0, 87.0, 108.0, 87.0, 237.0, 110.5, 237.0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 2 ],
 					"midpoints" : [ 403.5, 483.0, 228.0, 483.0, 228.0, 282.0, 87.0, 282.0, 87.0, 237.0, 442.100000000000023, 237.0 ],
 					"source" : [ "obj-65", 0 ]
@@ -1023,7 +1092,42 @@
 
 			}
  ],
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "273177__xserra__la-vaca-cega-eva.wav",
+				"bootpath" : "~/Documents/Max 8/sound-synth-tech SS2024/week 1 scaffold/synth-tech-media-master/speech",
+				"patcherrelativepath" : "./synth-tech-media-master/speech",
+				"type" : "WAVE",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "345836__krzysiunet__im-not-speaking-english.wav",
+				"bootpath" : "~/Documents/Max 8/sound-synth-tech SS2024/week 1 scaffold/synth-tech-media-master/speech",
+				"patcherrelativepath" : "./synth-tech-media-master/speech",
+				"type" : "WAVE",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "400909__inspectorj__voice-request-25-where-i-am.wav",
+				"bootpath" : "~/Documents/Max 8/sound-synth-tech SS2024/week 1 scaffold/synth-tech-media-master/speech",
+				"patcherrelativepath" : "./synth-tech-media-master/speech",
+				"type" : "WAVE",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "431165__inspectorj__voice-request-32-okay-chief-ch.wav",
+				"bootpath" : "~/Documents/Max 8/sound-synth-tech SS2024/week 1 scaffold/synth-tech-media-master/speech",
+				"patcherrelativepath" : "./synth-tech-media-master/speech",
+				"type" : "WAVE",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "476652__inspectorj__request-40-open-the-door.wav",
+				"bootpath" : "~/Documents/Max 8/sound-synth-tech SS2024/week 1 scaffold/synth-tech-media-master/speech",
+				"patcherrelativepath" : "./synth-tech-media-master/speech",
+				"type" : "WAVE",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 

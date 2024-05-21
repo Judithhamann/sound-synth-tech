@@ -58,7 +58,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1337.0, 717.0, 92.0, 91.0 ],
-					"presentation_linecount" : 4,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 750;\r\nmod.depth 300;\r\n"
 				}
 
@@ -71,7 +70,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1207.0, 850.5, 107.0, 75.0 ],
-					"presentation_linecount" : 5,
 					"text" : "fm is in the audio range (500)\nfm is also an integer ratio of fc\n\"harmonicity\""
 				}
 
@@ -85,7 +83,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1093.0, 840.5, 92.0, 91.0 ],
-					"presentation_linecount" : 4,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 500;\r\nmod.depth 300;\r\n"
 				}
 
@@ -98,7 +95,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1207.0, 739.0, 107.0, 34.0 ],
-					"presentation_linecount" : 2,
 					"text" : "fast fm\nwider mod depth"
 				}
 
@@ -112,7 +108,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1093.0, 729.0, 92.0, 91.0 ],
-					"presentation_linecount" : 5,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 25;\r\nmod.depth 300;\r\n"
 				}
 
@@ -125,7 +120,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 919.0, 855.0, 107.0, 62.0 ],
-					"presentation_linecount" : 4,
 					"text" : "slow fm (LFO)\nwide mod\ndepth\nVIBRATO!"
 				}
 
@@ -139,7 +133,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 812.0, 846.0, 85.0, 91.0 ],
-					"presentation_linecount" : 4,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 0.5;\r\nmod.depth 30;\r\n"
 				}
 
@@ -152,7 +145,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 919.0, 740.0, 107.0, 34.0 ],
-					"presentation_linecount" : 2,
 					"text" : "sine wave with no modulation"
 				}
 
@@ -177,7 +169,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 812.0, 736.0, 89.0, 91.0 ],
-					"presentation_linecount" : 4,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 0;\r\nmod.depth 0.5;\r\n"
 				}
 
@@ -190,7 +181,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1076.0, 407.0, 150.0, 48.0 ],
-					"presentation_linecount" : 3,
 					"text" : "new peaks above & below\nfc are SIDEBANGS\n fc-fm and fc+fm"
 				}
 
@@ -294,8 +284,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1183.0, 127.0, 75.0, 22.0 ],
-					"text" : "r modulation"
+					"patching_rect" : [ 1183.0, 127.0, 69.0, 22.0 ],
+					"text" : "r modulator"
 				}
 
 			}
@@ -318,7 +308,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1242.0, 163.0, 26.0, 20.0 ],
-					"text" : "fc"
+					"text" : "fm"
 				}
 
 			}
@@ -423,7 +413,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 536.0, 736.0, 82.0, 77.0 ],
-					"presentation_linecount" : 3,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 25;\r\n"
 				}
 
@@ -448,7 +437,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 321.0, 830.0, 82.0, 77.0 ],
-					"presentation_linecount" : 4,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 16;\r\n"
 				}
 
@@ -460,7 +448,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 410.5, 736.0, 106.0, 34.0 ],
+					"patching_rect" : [ 410.5, 736.0, 107.0, 34.0 ],
 					"text" : "sine wave with no modulation"
 				}
 
@@ -485,7 +473,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 324.0, 736.0, 76.0, 77.0 ],
-					"presentation_linecount" : 3,
 					"text" : ";\r\ncarrier 1000;\r\nmodulator 0;\r\n"
 				}
 
@@ -668,8 +655,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 760.0, 144.0, 75.0, 22.0 ],
-					"text" : "r modulation"
+					"patching_rect" : [ 760.0, 144.0, 69.0, 22.0 ],
+					"text" : "r modulator"
 				}
 
 			}
@@ -692,7 +679,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 819.0, 180.0, 26.0, 20.0 ],
-					"text" : "fc"
+					"text" : "fm"
 				}
 
 			}
@@ -891,8 +878,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 202.0, 158.0, 75.0, 22.0 ],
-					"text" : "r modulation"
+					"patching_rect" : [ 202.0, 158.0, 69.0, 22.0 ],
+					"text" : "r modulator"
 				}
 
 			}
