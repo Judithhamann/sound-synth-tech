@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 50.0, 84.0, 1213.0, 570.0 ],
+		"rect" : [ 1.0, 93.0, 1213.0, 570.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,244 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 6,
+							"revision" : 2,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 334.0, 119.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 379.0, 100.0, 89.0, 22.0 ],
+									"text" : "route gate time"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 379.0, 47.0, 69.0, 22.0 ],
+									"text" : "r debounce"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 74.0, 261.0, 106.0, 22.0 ],
+									"text" : "gate 1 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 249.0, 192.0, 29.5, 22.0 ],
+									"text" : "1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 249.0, 156.0, 67.0, 22.0 ],
+									"text" : "delay 1000"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-3",
+									"index" : 1,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 74.0, 403.0, 30.0, 30.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "int", "bang", "bang" ],
+									"patching_rect" : [ 74.0, 123.0, 194.0, 22.0 ],
+									"text" : "t 0 b b"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-1",
+									"index" : 1,
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 74.0, 65.0, 30.0, 30.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 1 ],
+									"source" : [ "obj-10", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 388.5, 246.0, 83.5, 246.0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-2", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 1 ],
+									"source" : [ "obj-2", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 258.5, 246.0, 83.5, 246.0 ],
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 175.0, 372.0, 71.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p debounce"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 176.0, 407.0, 50.0, 22.0 ]
+					"patching_rect" : [ 176.0, 506.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -56,7 +287,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 440.0, 176.0, 90.0, 20.0 ],
+					"patching_rect" : [ 439.0, 198.0, 90.0, 20.0 ],
 					"text" : "rewind to event"
 				}
 
@@ -79,7 +310,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 440.0, 198.0, 74.0, 20.0 ],
+					"patching_rect" : [ 544.0, 218.5, 74.0, 20.0 ],
 					"text" : "<live.menu>"
 				}
 
@@ -115,7 +346,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 176.0, 447.0, 88.0, 22.0 ],
+					"patching_rect" : [ 176.0, 541.0, 88.0, 22.0 ],
 					"text" : "s current.event"
 				}
 
@@ -151,7 +382,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 295.0, 332.0, 29.5, 22.0 ],
+					"patching_rect" : [ 298.0, 324.0, 29.5, 22.0 ],
 					"text" : "dec"
 				}
 
@@ -163,7 +394,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 371.0, 332.0, 29.5, 22.0 ],
+					"patching_rect" : [ 374.0, 324.0, 29.5, 22.0 ],
 					"text" : "inc"
 				}
 
@@ -175,7 +406,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 176.0, 361.0, 485.5, 22.0 ],
+					"patching_rect" : [ 176.0, 469.0, 485.5, 22.0 ],
 					"text" : "counter"
 				}
 
@@ -188,7 +419,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 176.0, 306.0, 24.0, 24.0 ]
+					"patching_rect" : [ 174.25, 293.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -247,7 +478,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 542.0, 267.0, 24.0, 24.0 ]
+					"patching_rect" : [ 726.0, 227.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -269,7 +500,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 542.0, 205.0, 119.5, 47.0 ],
+					"patching_rect" : [ 726.0, 165.0, 119.5, 47.0 ],
 					"text" : "PANIC!"
 				}
 
@@ -281,7 +512,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 542.0, 307.0, 47.0, 22.0 ],
+					"patching_rect" : [ 726.0, 267.0, 47.0, 22.0 ],
 					"text" : "s panic"
 				}
 
@@ -294,7 +525,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 542.0, 36.0, 201.0, 62.0 ],
+					"patching_rect" : [ 726.0, 20.0, 201.0, 62.0 ],
 					"text" : "Make a list of things to do. You will forget! A list always helps you stay focused in a fast-moving rehearsal or performance. ",
 					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
@@ -308,7 +539,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 722.0, 160.0, 173.0, 75.0 ],
+					"patching_rect" : [ 726.0, 86.0, 173.0, 75.0 ],
 					"text" : "CHECK LIST —\n1. INIT! \n2. Check mic level: interface.\n3. Check mic level: in-patch.\n4. Start piece (event #1)...",
 					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
 				}
@@ -521,7 +752,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 734.0, 426.0, 244.0, 75.0 ],
+					"patching_rect" : [ 734.0, 520.0, 244.0, 75.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -585,7 +816,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 36.0, 88.0, 1213.0, 570.0 ],
+						"rect" : [ -21.0, 125.0, 1213.0, 570.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1193,7 +1424,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 77.0, 1213.0, 570.0 ],
+						"rect" : [ 642.0, 121.0, 568.0, 422.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1636,7 +1867,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 77.0, 1213.0, 570.0 ],
+						"rect" : [ 20.0, 97.0, 1213.0, 570.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2290,7 +2521,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 37.0, 84.0, 1213.0, 570.0 ],
+						"rect" : [ 54.0, 91.0, 1213.0, 570.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2321,9 +2552,9 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-									"id" : "obj-3",
+									"id" : "obj-20",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 0,
 									"patcher" : 									{
 										"fileversion" : 1,
@@ -2336,7 +2567,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 64.0, 111.0, 1167.0, 469.0 ],
+										"rect" : [ 98.0, 116.0, 1167.0, 469.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2365,6 +2596,2233 @@
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-20",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 57.0, 396.0, 57.0, 20.0 ],
+													"text" : " Event 6",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-23",
+													"linecount" : 3,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 362.0, 615.0, 185.0, 50.0 ],
+													"text" : ";\r\nping.process.switch 0;\r\nprinter.thingy \"Fadeout complete\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-21",
+													"linecount" : 3,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 676.0, 552.0, 339.0, 50.0 ],
+													"text" : ";\r\nping.output.gain -70. 15000;\r\nprinter.thingy \"Decreasing output volume on final event, 15s...\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 365.25, 552.0, 61.0, 22.0 ],
+													"text" : "del 15000"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-5",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 57.0, 495.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-16",
+													"index" : 2,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 57.0, 418.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-17",
+													"linecount" : 6,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 18.0, 225.5, 289.0, 119.0 ],
+													"text" : ";\r\nprinter.thingy \"Sending ping values...\";\r\nping.low.ms 100;\r\nping.hi.ms 900;\r\nping.click.gain 23.;\r\nprinter.thingy \"INIT Complete! Ready for Event #1...\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-6",
+													"linecount" : 9,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 634.5, 220.0, 240.0, 160.0 ],
+													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-18",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 32.386363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "3. Send initial params to PING...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-15",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 340.636363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "2. Get path and load initial files...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-14",
+													"linecount" : 6,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 955.0, 159.099853499999995, 198.5, 89.0 ],
+													"text" : "EXAMPLE: Imagine this fader lives somewhere in a subpatch and you want to raise its level over 2s. Use a named <r> object and send the appropraite syntax from a remote message box in this init subpatch:",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-13",
+													"maxclass" : "newobj",
+													"numinlets" : 3,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "bang" ],
+													"patching_rect" : [ 955.0, 282.0, 68.0, 22.0 ],
+													"text" : "line -70. 20"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+													"id" : "obj-12",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 955.0, 253.0, 50.0, 22.0 ],
+													"text" : "r fader1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-11",
+													"lastchannelcount" : 0,
+													"maxclass" : "live.gain~",
+													"numinlets" : 2,
+													"numoutlets" : 5,
+													"outlettype" : [ "signal", "signal", "", "float", "list" ],
+													"parameter_enable" : 1,
+													"patching_rect" : [ 955.0, 312.0, 48.0, 136.0 ],
+													"saved_attribute_attributes" : 													{
+														"valueof" : 														{
+															"parameter_initial" : [ -70 ],
+															"parameter_initial_enable" : 1,
+															"parameter_longname" : "live.gain~[9]",
+															"parameter_mmax" : 6.0,
+															"parameter_mmin" : -70.0,
+															"parameter_modmode" : 0,
+															"parameter_shortname" : "live.gain~[2]",
+															"parameter_type" : 0,
+															"parameter_unitstyle" : 4
+														}
+
+													}
+,
+													"varname" : "live.gain~"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-10",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 1036.5, 253.0, 117.0, 64.0 ],
+													"text" : ";\r\nfader1 -70., 0. 2000;\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-9",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 650.636363636363626, 193.099853499999995, 252.0, 20.0 ],
+													"text" : "1. Send DSP params. to Audio Status menu...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-8",
+													"linecount" : 2,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 110.599853499999995, 1007.999999999999886, 34.0 ],
+													"text" : "Do this in all subpatches used in your piece. Initial messages should be sent only using the ordered remove message boxes below, and if something crashes, you can easily reorder the initial values sent through messages here, or use delay times to stagger their send priority. You can also use <deferlow> to move a message to a lower priority thread.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bgcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-4",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 88.599853499999995, 465.0, 20.0 ],
+													"text" : "Replace all <loadbang> and <loadmess> objects with a unique <receive> object.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-1",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 14.0, 98.0, 20.0 ],
+													"text" : "INITIALIZATION",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-7",
+													"linecount" : 3,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 36.0, 1007.999999999999886, 48.0 ],
+													"text" : "INIT is no joke — To initialize your patch requires the close synchronization of many different initial values sent to a number of objects in different subpatches. All of this happens betore your first event and the first sounds made in your piece. In our pedagogical patches throughout the semester, we've always used <loadbang> and <loadmess> objects to send these initial values, but in a full piece with many sub tasks, tons of <loadbangs> objects in your performance patch can easily cause your patch to crash on load. ",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 18.0, 155.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 18.0, 14.0, 30.0, 30.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-13", 0 ],
+													"source" : [ "obj-12", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-11", 0 ],
+													"source" : [ "obj-13", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-5", 0 ],
+													"source" : [ "obj-16", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-23", 0 ],
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-3", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-6", 0 ],
+													"source" : [ "obj-3", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"source" : [ "obj-5", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-21", 0 ],
+													"source" : [ "obj-5", 2 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 615.0, 247.0, 29.5, 22.0 ],
+									"saved_object_attributes" : 									{
+										"description" : "",
+										"digest" : "",
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p 6"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"id" : "obj-18",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 8,
+											"minor" : 6,
+											"revision" : 2,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 98.0, 116.0, 1167.0, 469.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 1,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
+										"boxanimatetime" : 200,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-20",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 57.0, 396.0, 57.0, 20.0 ],
+													"text" : " Event 5",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-23",
+													"linecount" : 4,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 362.0, 615.0, 234.0, 64.0 ],
+													"text" : ";\r\nping.hi.ms 200;\r\nping.low.ms 50;\r\nping.low.ms printer.thingy \"Fade complete\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-21",
+													"linecount" : 6,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 676.0, 552.0, 389.0, 91.0 ],
+													"text" : ";\r\nping.click.gain 23;\r\nping.output.gain 12. 6000;\r\nping.hi.ms 300;\r\nping.low.ms 100;\r\nprinter.thingy \"Increasing the input to the filter, and the output over 6s...\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 365.25, 552.0, 55.0, 22.0 ],
+													"text" : "del 6000"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-5",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 57.0, 495.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-16",
+													"index" : 2,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 57.0, 418.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-17",
+													"linecount" : 6,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 18.0, 225.5, 289.0, 119.0 ],
+													"text" : ";\r\nprinter.thingy \"Sending ping values...\";\r\nping.low.ms 100;\r\nping.hi.ms 900;\r\nping.click.gain 23.;\r\nprinter.thingy \"INIT Complete! Ready for Event #1...\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-6",
+													"linecount" : 9,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 634.5, 220.0, 240.0, 160.0 ],
+													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-18",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 32.386363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "3. Send initial params to PING...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-15",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 340.636363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "2. Get path and load initial files...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-14",
+													"linecount" : 6,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 955.0, 159.099853499999995, 198.5, 89.0 ],
+													"text" : "EXAMPLE: Imagine this fader lives somewhere in a subpatch and you want to raise its level over 2s. Use a named <r> object and send the appropraite syntax from a remote message box in this init subpatch:",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-13",
+													"maxclass" : "newobj",
+													"numinlets" : 3,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "bang" ],
+													"patching_rect" : [ 955.0, 282.0, 68.0, 22.0 ],
+													"text" : "line -70. 20"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+													"id" : "obj-12",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 955.0, 253.0, 50.0, 22.0 ],
+													"text" : "r fader1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-11",
+													"lastchannelcount" : 0,
+													"maxclass" : "live.gain~",
+													"numinlets" : 2,
+													"numoutlets" : 5,
+													"outlettype" : [ "signal", "signal", "", "float", "list" ],
+													"parameter_enable" : 1,
+													"patching_rect" : [ 955.0, 312.0, 48.0, 136.0 ],
+													"saved_attribute_attributes" : 													{
+														"valueof" : 														{
+															"parameter_initial" : [ -70 ],
+															"parameter_initial_enable" : 1,
+															"parameter_longname" : "live.gain~[6]",
+															"parameter_mmax" : 6.0,
+															"parameter_mmin" : -70.0,
+															"parameter_modmode" : 0,
+															"parameter_shortname" : "live.gain~[2]",
+															"parameter_type" : 0,
+															"parameter_unitstyle" : 4
+														}
+
+													}
+,
+													"varname" : "live.gain~"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-10",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 1036.5, 253.0, 117.0, 64.0 ],
+													"text" : ";\r\nfader1 -70., 0. 2000;\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-9",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 650.636363636363626, 193.099853499999995, 252.0, 20.0 ],
+													"text" : "1. Send DSP params. to Audio Status menu...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-8",
+													"linecount" : 2,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 110.599853499999995, 1007.999999999999886, 34.0 ],
+													"text" : "Do this in all subpatches used in your piece. Initial messages should be sent only using the ordered remove message boxes below, and if something crashes, you can easily reorder the initial values sent through messages here, or use delay times to stagger their send priority. You can also use <deferlow> to move a message to a lower priority thread.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bgcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-4",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 88.599853499999995, 465.0, 20.0 ],
+													"text" : "Replace all <loadbang> and <loadmess> objects with a unique <receive> object.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-1",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 14.0, 98.0, 20.0 ],
+													"text" : "INITIALIZATION",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-7",
+													"linecount" : 3,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 36.0, 1007.999999999999886, 48.0 ],
+													"text" : "INIT is no joke — To initialize your patch requires the close synchronization of many different initial values sent to a number of objects in different subpatches. All of this happens betore your first event and the first sounds made in your piece. In our pedagogical patches throughout the semester, we've always used <loadbang> and <loadmess> objects to send these initial values, but in a full piece with many sub tasks, tons of <loadbangs> objects in your performance patch can easily cause your patch to crash on load. ",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 18.0, 155.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 18.0, 14.0, 30.0, 30.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-13", 0 ],
+													"source" : [ "obj-12", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-11", 0 ],
+													"source" : [ "obj-13", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-5", 0 ],
+													"source" : [ "obj-16", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-23", 0 ],
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-3", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-6", 0 ],
+													"source" : [ "obj-3", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"source" : [ "obj-5", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-21", 0 ],
+													"source" : [ "obj-5", 2 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 521.681818181818244, 247.0, 29.5, 22.0 ],
+									"saved_object_attributes" : 									{
+										"description" : "",
+										"digest" : "",
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p 5"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 8,
+											"minor" : 6,
+											"revision" : 2,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 98.0, 116.0, 1167.0, 469.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 1,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
+										"boxanimatetime" : 200,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-20",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 57.0, 396.0, 57.0, 20.0 ],
+													"text" : " Event 4",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-23",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 362.0, 615.0, 158.0, 36.0 ],
+													"text" : ";\r\nprinter.thingy \"Fade is done\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-21",
+													"linecount" : 3,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 676.0, 552.0, 267.0, 50.0 ],
+													"text" : ";\r\nping.click.gain 10;\r\nprinter.thingy \"Decreasing the volume of pings...\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 365.25, 552.0, 55.0, 22.0 ],
+													"text" : "del 3000"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-5",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 57.0, 495.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-16",
+													"index" : 2,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 57.0, 418.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-17",
+													"linecount" : 6,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 18.0, 225.5, 289.0, 119.0 ],
+													"text" : ";\r\nprinter.thingy \"Sending ping values...\";\r\nping.low.ms 100;\r\nping.hi.ms 900;\r\nping.click.gain 23.;\r\nprinter.thingy \"INIT Complete! Ready for Event #1...\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-6",
+													"linecount" : 9,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 634.5, 220.0, 240.0, 160.0 ],
+													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-18",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 32.386363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "3. Send initial params to PING...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-15",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 340.636363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "2. Get path and load initial files...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-14",
+													"linecount" : 6,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 955.0, 159.099853499999995, 198.5, 89.0 ],
+													"text" : "EXAMPLE: Imagine this fader lives somewhere in a subpatch and you want to raise its level over 2s. Use a named <r> object and send the appropraite syntax from a remote message box in this init subpatch:",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-13",
+													"maxclass" : "newobj",
+													"numinlets" : 3,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "bang" ],
+													"patching_rect" : [ 955.0, 282.0, 68.0, 22.0 ],
+													"text" : "line -70. 20"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+													"id" : "obj-12",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 955.0, 253.0, 50.0, 22.0 ],
+													"text" : "r fader1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-11",
+													"lastchannelcount" : 0,
+													"maxclass" : "live.gain~",
+													"numinlets" : 2,
+													"numoutlets" : 5,
+													"outlettype" : [ "signal", "signal", "", "float", "list" ],
+													"parameter_enable" : 1,
+													"patching_rect" : [ 955.0, 312.0, 48.0, 136.0 ],
+													"saved_attribute_attributes" : 													{
+														"valueof" : 														{
+															"parameter_initial" : [ -70 ],
+															"parameter_initial_enable" : 1,
+															"parameter_longname" : "live.gain~[8]",
+															"parameter_mmax" : 6.0,
+															"parameter_mmin" : -70.0,
+															"parameter_modmode" : 0,
+															"parameter_shortname" : "live.gain~[2]",
+															"parameter_type" : 0,
+															"parameter_unitstyle" : 4
+														}
+
+													}
+,
+													"varname" : "live.gain~"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-10",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 1036.5, 253.0, 117.0, 64.0 ],
+													"text" : ";\r\nfader1 -70., 0. 2000;\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-9",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 650.636363636363626, 193.099853499999995, 252.0, 20.0 ],
+													"text" : "1. Send DSP params. to Audio Status menu...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-8",
+													"linecount" : 2,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 110.599853499999995, 1007.999999999999886, 34.0 ],
+													"text" : "Do this in all subpatches used in your piece. Initial messages should be sent only using the ordered remove message boxes below, and if something crashes, you can easily reorder the initial values sent through messages here, or use delay times to stagger their send priority. You can also use <deferlow> to move a message to a lower priority thread.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bgcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-4",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 88.599853499999995, 465.0, 20.0 ],
+													"text" : "Replace all <loadbang> and <loadmess> objects with a unique <receive> object.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-1",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 14.0, 98.0, 20.0 ],
+													"text" : "INITIALIZATION",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-7",
+													"linecount" : 3,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 36.0, 1007.999999999999886, 48.0 ],
+													"text" : "INIT is no joke — To initialize your patch requires the close synchronization of many different initial values sent to a number of objects in different subpatches. All of this happens betore your first event and the first sounds made in your piece. In our pedagogical patches throughout the semester, we've always used <loadbang> and <loadmess> objects to send these initial values, but in a full piece with many sub tasks, tons of <loadbangs> objects in your performance patch can easily cause your patch to crash on load. ",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 18.0, 155.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 18.0, 14.0, 30.0, 30.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-13", 0 ],
+													"source" : [ "obj-12", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-11", 0 ],
+													"source" : [ "obj-13", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-5", 0 ],
+													"source" : [ "obj-16", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-23", 0 ],
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-3", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-6", 0 ],
+													"source" : [ "obj-3", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"source" : [ "obj-5", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-21", 0 ],
+													"source" : [ "obj-5", 2 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 424.0, 247.0, 29.5, 22.0 ],
+									"saved_object_attributes" : 									{
+										"description" : "",
+										"digest" : "",
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p 4"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"id" : "obj-15",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 8,
+											"minor" : 6,
+											"revision" : 2,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 98.0, 116.0, 1167.0, 469.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 1,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
+										"boxanimatetime" : 200,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-20",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 57.0, 396.0, 57.0, 20.0 ],
+													"text" : " Event 3",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-23",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 362.0, 615.0, 158.0, 36.0 ],
+													"text" : ";\r\nprinter.thingy \"Fade is done\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-21",
+													"linecount" : 4,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 676.0, 552.0, 266.0, 64.0 ],
+													"text" : ";\r\nping.hi.ms 300;\r\nping.low.ms 1000;\r\nprinter.thingy \"Decreasing the density of pings...\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 365.25, 552.0, 55.0, 22.0 ],
+													"text" : "del 3000"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-5",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 57.0, 495.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-16",
+													"index" : 2,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 57.0, 418.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-17",
+													"linecount" : 6,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 18.0, 225.5, 289.0, 119.0 ],
+													"text" : ";\r\nprinter.thingy \"Sending ping values...\";\r\nping.low.ms 100;\r\nping.hi.ms 900;\r\nping.click.gain 23.;\r\nprinter.thingy \"INIT Complete! Ready for Event #1...\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-6",
+													"linecount" : 9,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 634.5, 220.0, 240.0, 160.0 ],
+													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-18",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 32.386363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "3. Send initial params to PING...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-15",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 340.636363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "2. Get path and load initial files...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-14",
+													"linecount" : 6,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 955.0, 159.099853499999995, 198.5, 89.0 ],
+													"text" : "EXAMPLE: Imagine this fader lives somewhere in a subpatch and you want to raise its level over 2s. Use a named <r> object and send the appropraite syntax from a remote message box in this init subpatch:",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-13",
+													"maxclass" : "newobj",
+													"numinlets" : 3,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "bang" ],
+													"patching_rect" : [ 955.0, 282.0, 68.0, 22.0 ],
+													"text" : "line -70. 20"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+													"id" : "obj-12",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 955.0, 253.0, 50.0, 22.0 ],
+													"text" : "r fader1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-11",
+													"lastchannelcount" : 0,
+													"maxclass" : "live.gain~",
+													"numinlets" : 2,
+													"numoutlets" : 5,
+													"outlettype" : [ "signal", "signal", "", "float", "list" ],
+													"parameter_enable" : 1,
+													"patching_rect" : [ 955.0, 312.0, 48.0, 136.0 ],
+													"saved_attribute_attributes" : 													{
+														"valueof" : 														{
+															"parameter_initial" : [ -70 ],
+															"parameter_initial_enable" : 1,
+															"parameter_longname" : "live.gain~[7]",
+															"parameter_mmax" : 6.0,
+															"parameter_mmin" : -70.0,
+															"parameter_modmode" : 0,
+															"parameter_shortname" : "live.gain~[2]",
+															"parameter_type" : 0,
+															"parameter_unitstyle" : 4
+														}
+
+													}
+,
+													"varname" : "live.gain~"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-10",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 1036.5, 253.0, 117.0, 64.0 ],
+													"text" : ";\r\nfader1 -70., 0. 2000;\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-9",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 650.636363636363626, 193.099853499999995, 252.0, 20.0 ],
+													"text" : "1. Send DSP params. to Audio Status menu...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-8",
+													"linecount" : 2,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 110.599853499999995, 1007.999999999999886, 34.0 ],
+													"text" : "Do this in all subpatches used in your piece. Initial messages should be sent only using the ordered remove message boxes below, and if something crashes, you can easily reorder the initial values sent through messages here, or use delay times to stagger their send priority. You can also use <deferlow> to move a message to a lower priority thread.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bgcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-4",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 88.599853499999995, 465.0, 20.0 ],
+													"text" : "Replace all <loadbang> and <loadmess> objects with a unique <receive> object.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-1",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 14.0, 98.0, 20.0 ],
+													"text" : "INITIALIZATION",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-7",
+													"linecount" : 3,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 36.0, 1007.999999999999886, 48.0 ],
+													"text" : "INIT is no joke — To initialize your patch requires the close synchronization of many different initial values sent to a number of objects in different subpatches. All of this happens betore your first event and the first sounds made in your piece. In our pedagogical patches throughout the semester, we've always used <loadbang> and <loadmess> objects to send these initial values, but in a full piece with many sub tasks, tons of <loadbangs> objects in your performance patch can easily cause your patch to crash on load. ",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 18.0, 155.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 18.0, 14.0, 30.0, 30.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-13", 0 ],
+													"source" : [ "obj-12", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-11", 0 ],
+													"source" : [ "obj-13", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-5", 0 ],
+													"source" : [ "obj-16", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-23", 0 ],
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-3", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-6", 0 ],
+													"source" : [ "obj-3", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"source" : [ "obj-5", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-21", 0 ],
+													"source" : [ "obj-5", 2 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 320.0, 247.0, 29.5, 22.0 ],
+									"saved_object_attributes" : 									{
+										"description" : "",
+										"digest" : "",
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p 3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 8,
+											"minor" : 6,
+											"revision" : 2,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 98.0, 116.0, 1167.0, 469.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 1,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
+										"boxanimatetime" : 200,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-20",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 57.0, 396.0, 57.0, 20.0 ],
+													"text" : " Event 2",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-23",
+													"linecount" : 3,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 362.0, 615.0, 188.0, 50.0 ],
+													"text" : ";\r\nping.hi.ms 200;\r\nprinter.thingy \"Even faster pings!.\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-21",
+													"linecount" : 3,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 676.0, 552.0, 261.0, 50.0 ],
+													"text" : ";\r\nping.hi.ms 400;\r\nprinter.thingy \"Increasing the density of pings...\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 365.25, 552.0, 55.0, 22.0 ],
+													"text" : "del 3000"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-5",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 57.0, 495.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-16",
+													"index" : 2,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 57.0, 418.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-17",
+													"linecount" : 6,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 18.0, 225.5, 289.0, 119.0 ],
+													"text" : ";\r\nprinter.thingy \"Sending ping values...\";\r\nping.low.ms 100;\r\nping.hi.ms 900;\r\nping.click.gain 23.;\r\nprinter.thingy \"INIT Complete! Ready for Event #1...\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-6",
+													"linecount" : 9,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 634.5, 220.0, 240.0, 160.0 ],
+													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-18",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 32.386363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "3. Send initial params to PING...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-15",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 340.636363636363626, 193.099853499999995, 183.0, 20.0 ],
+													"text" : "2. Get path and load initial files...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-14",
+													"linecount" : 6,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 955.0, 159.099853499999995, 198.5, 89.0 ],
+													"text" : "EXAMPLE: Imagine this fader lives somewhere in a subpatch and you want to raise its level over 2s. Use a named <r> object and send the appropraite syntax from a remote message box in this init subpatch:",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-13",
+													"maxclass" : "newobj",
+													"numinlets" : 3,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "bang" ],
+													"patching_rect" : [ 955.0, 282.0, 68.0, 22.0 ],
+													"text" : "line -70. 20"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.0, 0.533333, 0.168627, 1.0 ],
+													"id" : "obj-12",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 955.0, 253.0, 50.0, 22.0 ],
+													"text" : "r fader1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-11",
+													"lastchannelcount" : 0,
+													"maxclass" : "live.gain~",
+													"numinlets" : 2,
+													"numoutlets" : 5,
+													"outlettype" : [ "signal", "signal", "", "float", "list" ],
+													"parameter_enable" : 1,
+													"patching_rect" : [ 955.0, 312.0, 48.0, 136.0 ],
+													"saved_attribute_attributes" : 													{
+														"valueof" : 														{
+															"parameter_initial" : [ -70 ],
+															"parameter_initial_enable" : 1,
+															"parameter_longname" : "live.gain~[5]",
+															"parameter_mmax" : 6.0,
+															"parameter_mmin" : -70.0,
+															"parameter_modmode" : 0,
+															"parameter_shortname" : "live.gain~[2]",
+															"parameter_type" : 0,
+															"parameter_unitstyle" : 4
+														}
+
+													}
+,
+													"varname" : "live.gain~"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-10",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 1036.5, 253.0, 117.0, 64.0 ],
+													"text" : ";\r\nfader1 -70., 0. 2000;\r\n"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-9",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 650.636363636363626, 193.099853499999995, 252.0, 20.0 ],
+													"text" : "1. Send DSP params. to Audio Status menu...",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-8",
+													"linecount" : 2,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 110.599853499999995, 1007.999999999999886, 34.0 ],
+													"text" : "Do this in all subpatches used in your piece. Initial messages should be sent only using the ordered remove message boxes below, and if something crashes, you can easily reorder the initial values sent through messages here, or use delay times to stagger their send priority. You can also use <deferlow> to move a message to a lower priority thread.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bgcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-4",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 88.599853499999995, 465.0, 20.0 ],
+													"text" : "Replace all <loadbang> and <loadmess> objects with a unique <receive> object.",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-1",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 14.0, 98.0, 20.0 ],
+													"text" : "INITIALIZATION",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"id" : "obj-7",
+													"linecount" : 3,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 36.0, 1007.999999999999886, 48.0 ],
+													"text" : "INIT is no joke — To initialize your patch requires the close synchronization of many different initial values sent to a number of objects in different subpatches. All of this happens betore your first event and the first sounds made in your piece. In our pedagogical patches throughout the semester, we've always used <loadbang> and <loadmess> objects to send these initial values, but in a full piece with many sub tasks, tons of <loadbangs> objects in your performance patch can easily cause your patch to crash on load. ",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 18.0, 155.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 18.0, 14.0, 30.0, 30.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-13", 0 ],
+													"source" : [ "obj-12", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-11", 0 ],
+													"source" : [ "obj-13", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-5", 0 ],
+													"source" : [ "obj-16", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-23", 0 ],
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-3", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-17", 0 ],
+													"source" : [ "obj-3", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-6", 0 ],
+													"source" : [ "obj-3", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"source" : [ "obj-5", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-21", 0 ],
+													"source" : [ "obj-5", 2 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 224.27272727272728, 247.0, 29.5, 22.0 ],
+									"saved_object_attributes" : 									{
+										"description" : "",
+										"digest" : "",
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 8,
+											"minor" : 6,
+											"revision" : 2,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 77.0, 181.0, 1167.0, 469.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 1,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
+										"boxanimatetime" : 200,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-24",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 60.136363636363626, 391.0, 98.0, 34.0 ],
+													"text" : "Event 1\n",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-23",
+													"linecount" : 2,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 362.0, 615.0, 158.0, 36.0 ],
+													"text" : ";\r\nprinter.thingy \"Fade is done\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-21",
+													"linecount" : 4,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 676.0, 552.0, 206.0, 64.0 ],
+													"text" : ";\r\nping.process.swich 1;\r\nping.output.gain -70., 0. 10000;\r\nprinter.thingy \"Fading in pings. 10s...\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-19",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 365.25, 552.0, 68.0, 22.0 ],
+													"text" : "del 100000"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-5",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 57.0, 495.0, 635.5, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-16",
+													"index" : 2,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 57.0, 418.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"id" : "obj-17",
 													"linecount" : 6,
@@ -2609,6 +5067,20 @@
 											}
 , 											{
 												"patchline" : 												{
+													"destination" : [ "obj-5", 0 ],
+													"source" : [ "obj-16", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-23", 0 ],
+													"source" : [ "obj-19", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-3", 0 ],
 													"source" : [ "obj-2", 0 ]
 												}
@@ -2625,6 +5097,20 @@
 												"patchline" : 												{
 													"destination" : [ "obj-6", 0 ],
 													"source" : [ "obj-3", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-19", 0 ],
+													"source" : [ "obj-5", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-21", 0 ],
+													"source" : [ "obj-5", 2 ]
 												}
 
 											}
@@ -2805,7 +5291,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 52.0, 84.0, 1213.0, 570.0 ],
+										"rect" : [ 83.0, 84.0, 1213.0, 570.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2849,13 +5335,13 @@
 , 											{
 												"box" : 												{
 													"id" : "obj-6",
-													"linecount" : 9,
+													"linecount" : 10,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 634.5, 220.0, 240.0, 160.0 ],
-													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\n"
+													"patching_rect" : [ 634.5, 220.0, 240.0, 174.0 ],
+													"text" : ";\r\nping.process.switch 0;\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\n"
 												}
 
 											}
@@ -3140,6 +5626,34 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"source" : [ "obj-1", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"source" : [ "obj-1", 4 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"source" : [ "obj-1", 5 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"source" : [ "obj-1", 6 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
 									"source" : [ "obj-1", 1 ]
 								}
@@ -3149,6 +5663,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-37", 0 ],
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"source" : [ "obj-1", 2 ]
 								}
 
 							}
@@ -3198,7 +5719,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 69.0, 87.0, 1213.0, 570.0 ],
+						"rect" : [ 34.0, 77.0, 1213.0, 570.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3228,14 +5749,76 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 0,
+									"patching_rect" : [ 110.0, 155.0, 67.0, 22.0 ],
+									"text" : "lg.ping.v02"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 376.0, 146.0, 31.0, 22.0 ],
+									"text" : "play"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 504.0, 155.0, 78.0, 22.0 ],
+									"text" : "r bach.player"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bwcompatibility" : 80200,
+									"defaultnoteslots" : [ "null" ],
+									"fontface" : 0,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-18",
+									"loop" : [ 0.0, 1000.0 ],
+									"maxclass" : "bach.roll",
+									"numinlets" : 6,
+									"numoutlets" : 8,
+									"numvoices" : 1,
+									"out" : "nnnnnnn",
+									"outlettype" : [ "", "", "", "", "", "", "", "bang" ],
+									"patching_rect" : [ 354.0, 199.0, 526.0, 120.0 ],
+									"pitcheditrange" : [ "null" ],
+									"stafflines" : [ 5 ],
+									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"versionnumber" : 80200,
+									"voicenames" : [ "[", "]" ],
+									"voicespacing" : [ 0.0, 17.0 ],
+									"whole_roll_data_0000000000" : [ "roll", "[", "slotinfo", "[", 1, "[", "name", "velocity envelope", "]", "[", "type", "function", "]", "[", "key", 0, "]", "[", "range", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1080016896, "]", "[", "slope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "representation", "]", "[", "grid", "]", "[", "ysnap", "]", "[", "domain", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1072693248, "]", "[", "domainslope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "temporalmode", "relative", "]", "[", "extend", 0, "]", "[", "width", "auto", "]", "[", "height", "auto", "]", "[", "copywhensplit", 0, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 2, "[", "name", "slot function", "]", "[", "type", "function", "]", "[", "key", 0, "]", "[", "range", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1072693248, "]", "[", "slope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "representation", "]", "[", "grid", "]", "[", "ysnap", "]", "[", "domain", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1072693248, "]", "[", "domainslope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "temporalmode", "relative", "]", "[", "extend", 0, "]", "[", "width", "auto", "]", "[", "height", "auto", "]", "[", "copywhensplit", 0, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 3, "[", "name", "slot intlist", "]", "[", "type", "intlist", "]", "[", "key", 0, "]", "[", "range", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1080016896, "]", "[", "slope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "representation", "]", "[", "default", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1078984704, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 4, "[", "name", "slot floatlist", "]", "[", "type", "floatlist", "]", "[", "key", 0, "]", "[", "range", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1072693248, "]", "[", "slope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "representation", "]", "[", "default", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 5, "[", "name", "slot int", "]", "[", "type", "int", "]", "[", "key", 0, "]", "[", "range", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1080016896, "]", "[", "slope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "representation", "]", "[", "default", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1078984704, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 6, "[", "name", "slot float", "]", "[", "type", "float", "]", "[", "key", 0, "]", "[", "range", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1072693248, "]", "[", "slope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "representation", "]", "[", "default", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 7, "[", "name", "slot text", "]", "[", "type", "text", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 0, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 8, "[", "name", "slot filelist", "]", "[", "type", "filelist", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1080213504, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 9, "[", "name", "slot spat", "]", "[", "type", "spat", "]", "[", "key", 0, "]", "[", "range", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1076101120, "]", "[", "slope", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 0, "]", "[", "representation", "]", "[", "temporalmode", "relative", "]", "[", "extend", 0, "]", "[", "width", "auto", "]", "[", "height", "auto", "]", "[", "copywhensplit", 0, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 10, "[", "name", "slot llll", "]", "[", "type", "llll", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 0, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 11, "[", "name", "slot 11", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 12, "[", "name", "slot 12", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 13, "[", "name", "slot 13", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 14, "[", "name", "slot 14", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 15, "[", "name", "slot 15", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 16, "[", "name", "slot 16", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 17, "[", "name", "slot 17", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 18, "[", "name", "slot 18", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 19, "[", "name", "slot 19", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 20, "[", "name", "dynamics", "]", "[", "type", "dynamics", "]", "[", "key", "d", "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079738368, "]", "[", "height", "auto", "]", "[", "copywhensplit", 0, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 21, "[", "name", "lyrics", "]", "[", "type", "text", "]", "[", "key", "l", "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 0, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 22, "[", "name", "articulations", "]", "[", "type", "articulations", "]", "[", "key", "a", "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079738368, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 23, "[", "name", "notehead", "]", "[", "type", "notehead", "]", "[", "key", "h", "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079738368, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 24, "[", "name", "annotation", "]", "[", "type", "text", "]", "[", "key", "t", "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 25, "[", "name", "slot 25", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 26, "[", "name", "slot 26", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 27, "[", "name", "slot 27", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 28, "[", "name", "slot 28", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 29, "[", "name", "slot 29", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "[", 30, "[", "name", "slot 30", "]", "[", "type", "none", "]", "[", "key", 0, "]", "[", "temporalmode", "none", "]", "[", "extend", 0, "]", "[", "width", "_x_x_x_x_bach_float64_x_x_x_x_", 0, 1079574528, "]", "[", "height", "auto", "]", "[", "copywhensplit", 1, "]", "[", "access", "readandwrite", "]", "[", "follownotehead", 0, "]", "]", "]", "[", "commands", "[", 1, "[", "name", "command", "]", "[", "note", "note", "]", "[", "chord", "chord", "]", "[", "rest", "rest", "]", "[", "marker", "marker", "]", "[", "start", "none", "]", "[", "end", "none", "]", "[", "key", 0, "]", "]", "[", 2, "[", "name", "command", "]", "[", "note", "note", "]", "[", "chord", "chord", "]", "[", "rest", "rest", "]", "[", "marker", "marker", "]", "[", "start", "none", "]", "[", "end", "none", "]", "[", "key", 0, "]", "]", "[", 3, "[", "name", "command", "]", "[", "note", "note", "]", "[", "chord", "chord", "]", "[", "rest", "rest", "]", "[", "marker", "marker", "]", "[", "start", "none", "]", "[", "end", "none", "]", "[", "key", 0, "]", "]", "[", 4, "[", "name", "command", "]", "[", "note", "note", "]", "[", "chord", "chord", "]", "[", "rest", "rest", "]", "[", "marker", "marker", "]", "[", "start", "none", "]", "[", "end", "none", "]", "[", "key", 0, "]", "]", "[", 5, "[", "name", "command", "]", "[", "note", "note", "]", "[", "chord", "chord", "]", "[", "rest", "rest", "]", "[", "marker", "marker", "]", "[", "start", "none", "]", "[", "end", "none", "]", "[", "key", 0, "]", "]", "]", "[", "groups", "]", "[", "markers", "]", "[", "midichannels", 1, "]", "[", "articulationinfo", "]", "[", "noteheadinfo", "]", "[", 0, "]" ],
+									"whole_roll_data_count" : [ 1 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-16",
 									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 536.0, 391.0, 162.0, 36.0 ],
-									"text" : ";\r\nprinter.thingy \"Fade is done.\""
+									"patching_rect" : [ 554.0, 650.0, 161.0, 36.0 ],
+									"text" : ";\r\nptinter.thingy \"Fade is done.\""
 								}
 
 							}
@@ -3246,7 +5829,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 600.0, 317.0, 61.0, 22.0 ],
+									"patching_rect" : [ 618.0, 576.0, 61.0, 22.0 ],
 									"text" : "del 10000"
 								}
 
@@ -3259,7 +5842,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 754.0, 325.0, 206.0, 64.0 ],
+									"patching_rect" : [ 772.0, 584.0, 206.0, 64.0 ],
 									"text" : ";\r\nping.process.switch 1;\r\nping.output.gain -70., 0. 10000;\r\nprinter.thingy \"Fading in pings, 10s...\""
 								}
 
@@ -3273,7 +5856,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 442.0, 202.5, 30.0, 30.0 ]
+									"patching_rect" : [ 460.0, 462.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -3284,7 +5867,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "bang" ],
-									"patching_rect" : [ 442.0, 268.0, 325.0, 22.0 ],
+									"patching_rect" : [ 460.0, 527.0, 325.0, 22.0 ],
 									"text" : "b 3"
 								}
 
@@ -3298,17 +5881,6 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 170.0, 330.0, 101.0, 22.0 ],
 									"text" : "r ping.output.gain"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-6",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patching_rect" : [ 121.5, 152.0, 67.0, 22.0 ],
-									"text" : "lg.ping.v02"
 								}
 
 							}
@@ -3440,6 +6012,20 @@
 								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
 									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"source" : [ "obj-21", 0 ]
 								}
 
 							}
@@ -3786,7 +6372,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -3842,6 +6428,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-40", 0 ]
 				}
@@ -3872,8 +6465,13 @@
 		"parameters" : 		{
 			"obj-2::obj-5" : [ "live.gain~[3]", "ping", 0 ],
 			"obj-31" : [ "live.menu", "live.menu", 0 ],
+			"obj-3::obj-15::obj-11" : [ "live.gain~[7]", "live.gain~[2]", 0 ],
+			"obj-3::obj-16::obj-11" : [ "live.gain~[8]", "live.gain~[2]", 0 ],
+			"obj-3::obj-18::obj-11" : [ "live.gain~[6]", "live.gain~[2]", 0 ],
+			"obj-3::obj-20::obj-11" : [ "live.gain~[9]", "live.gain~[2]", 0 ],
 			"obj-3::obj-37::obj-11" : [ "live.gain~[2]", "live.gain~[2]", 0 ],
 			"obj-3::obj-3::obj-11" : [ "live.gain~[4]", "live.gain~[2]", 0 ],
+			"obj-3::obj-8::obj-11" : [ "live.gain~[5]", "live.gain~[2]", 0 ],
 			"obj-67::obj-66" : [ "live.gain~", "sounds", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
@@ -3887,7 +6485,11 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "bach.roll.mxe64",
+				"type" : "mx64"
+			}
+ ],
 		"autosave" : 0
 	}
 
