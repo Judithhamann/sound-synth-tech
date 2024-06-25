@@ -609,7 +609,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 724.0, 102.0, 244.0, 324.0 ],
-					"text" : "CHECK LIST —\n1. turn on <ezdac> / <ezdac> anmachen\n2. Connect the USB-keyboard with the computer  / verbinde das Keyboard mit dem computer\n3. Soundcheck of the keyboard / Klangtest\n4. INIT!\n5. Start piece (event #1)... and play the keyboard\n6. Start event #2 ... and play the keyboard\n7. Start event #3 ... and  play the k...\n8. Start event #2 ... and play the k...\n9. Start event #4 ...and play....\n10. Start event #5 \n11. Start event #6 \n12.  Set the 4. Preset\n13. Start event #8\n14. Repeat all steps from 6.\n15. Start event #7 after event #6\n15. Turn all things off.\n15. Done! :D\n",
+					"text" : "CHECK LIST —\n1. turn on <ezdac> / <ezdac> anmachen\n2. Connect the USB-keyboard with the computer  / verbinde das Keyboard mit dem computer\n3. INIT! \n4.  Soundcheck of the keyboard / Klangtest\n5. Start piece (event #1)... and play the keyboard\n6. Start event #2 ... and play the keyboard\n7. Start event #3 ... and  play the k...\n8. Start event #2 ... and play the k...\n9. Start event #4 ...and play....\n10. Start event #5 \n11. Start event #6 \n12.  Set the 4. Preset\n13. Start event #8\n14. Repeat all steps from 6.\n15. Start event #7 after event #6\n15. Turn all things off.\n15. Done! :D\n",
 					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
 				}
 
@@ -893,6 +893,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-3",
@@ -1320,7 +1321,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1125.0, 269.0, 29.5, 22.0 ],
-									"text" : "0"
+									"text" : "1"
 								}
 
 							}
@@ -1392,7 +1393,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 850.0, 269.0, 29.5, 22.0 ],
-									"text" : "0"
+									"text" : "1"
 								}
 
 							}
@@ -2996,6 +2997,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontface" : 2,
@@ -4564,13 +4566,13 @@
 , 											{
 												"box" : 												{
 													"id" : "obj-6",
-													"linecount" : 11,
+													"linecount" : 13,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 634.5, 220.0, 241.0, 188.0 ],
-													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"DSP settings have been set\";\r\nmidi_ìnit bang;\r\nprinter.thingy \"MIDI settings have been set\";\r\n"
+													"patching_rect" : [ 634.5, 220.0, 241.0, 215.0 ],
+													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\nmainkeyboardgate 1;\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"keyboard gate is open\";\r\nprinter.thingy \"DSP settings have been set\";\r\nmidi_ìnit bang;\r\nprinter.thingy \"MIDI settings have been set\";\r\n"
 												}
 
 											}
@@ -4991,6 +4993,56 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 517.0, 588.0, 150.0, 34.0 ],
+									"presentation_linecount" : 2,
+									"text" : "<= duration (ms) of the \"note\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-10",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 463.0, 601.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 449.0, 640.0, 81.0, 22.0 ],
+									"text" : "setdomain $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 781.0, 804.0, 115.0, 22.0 ],
+									"text" : "r mainkeyboardgate"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"color" : [ 1.0, 0.968627450980392, 0.0, 1.0 ],
 									"id" : "obj-5",
@@ -5738,8 +5790,9 @@
 							}
 , 							{
 								"box" : 								{
-									"addpoints" : [ 0.0, 0.0, 0, 260.638297872340445, 0.373333333333333, 0, 494.680851063829778, 0.84, 0, 776.595744680851112, 0.746666666666667, 0, 994.680851063829778, 0.066666666666667, 0 ],
+									"addpoints" : [ 0.0, 0.0, 0, 404.255319148936167, 0.906666666666667, 0, 829.787234042553223, 0.146666666666667, 0, 1468.085106382978665, 0.88, 0, 4000.0, 0.0, 0 ],
 									"classic_curve" : 1,
+									"domain" : 4000.0,
 									"id" : "obj-27",
 									"maxclass" : "function",
 									"numinlets" : 1,
@@ -6005,6 +6058,13 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-17", 0 ],
 									"midpoints" : [ 737.5, 871.5, 723.0, 871.5, 723.0, 808.5, 737.5, 808.5 ],
 									"source" : [ "obj-11", 0 ]
@@ -6192,7 +6252,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-54", 0 ],
-									"midpoints" : [ 809.5, 548.0, 786.0, 548.0, 786.0, 605.0, 271.5, 605.0 ],
+									"midpoints" : [ 809.5, 546.0, 498.0, 546.0, 498.0, 588.0, 450.0, 588.0, 450.0, 603.0, 271.5, 603.0 ],
 									"source" : [ "obj-38", 0 ]
 								}
 
@@ -6200,8 +6260,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-54", 0 ],
-									"midpoints" : [ 760.5, 548.0, 498.0, 548.0, 498.0, 605.0, 271.5, 605.0 ],
+									"midpoints" : [ 760.5, 546.0, 498.0, 546.0, 498.0, 588.0, 450.0, 588.0, 450.0, 603.0, 271.5, 603.0 ],
 									"source" : [ "obj-39", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -6246,7 +6313,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-67", 0 ],
-									"midpoints" : [ 750.5, 443.0, 736.0, 443.0, 736.0, 596.0, 418.5, 596.0 ],
+									"midpoints" : [ 750.5, 444.0, 735.0, 444.0, 735.0, 573.0, 483.0, 573.0, 483.0, 591.0, 418.5, 591.0 ],
 									"order" : 1,
 									"source" : [ "obj-47", 0 ]
 								}
@@ -6477,6 +6544,13 @@
 									"destination" : [ "obj-78", 0 ],
 									"order" : 1,
 									"source" : [ "obj-79", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-27", 0 ],
+									"source" : [ "obj-8", 0 ]
 								}
 
 							}
