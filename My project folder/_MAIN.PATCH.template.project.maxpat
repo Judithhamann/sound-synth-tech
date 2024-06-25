@@ -1320,7 +1320,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1125.0, 269.0, 29.5, 22.0 ],
-									"text" : "8"
+									"text" : "0"
 								}
 
 							}
@@ -1392,7 +1392,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 850.0, 269.0, 29.5, 22.0 ],
-									"text" : "4"
+									"text" : "0"
 								}
 
 							}
@@ -3088,7 +3088,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 207.0, 180.0, 55.0, 22.0 ],
+													"patching_rect" : [ 207.0, 184.0, 55.0, 22.0 ],
 													"text" : "del 4000"
 												}
 
@@ -3101,7 +3101,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 207.0, 222.0, 172.0, 133.0 ],
+													"patching_rect" : [ 207.0, 226.0, 172.0, 133.0 ],
 													"text" : ";\r\nsynth1 57.;\r\nprinter.thingy \"Value 57. sent.\";\r\n;\r\nsynth2 63.;\r\nprinter.thingy \"Value 63. sent.\";\r\n;\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
 												}
 
@@ -3109,13 +3109,13 @@
 , 											{
 												"box" : 												{
 													"id" : "obj-82",
-													"linecount" : 7,
+													"linecount" : 9,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 415.0, 190.0, 172.0, 105.0 ],
-													"text" : ";\r\nsynth1 58.;\r\nprinter.thingy \"Value 58. sent.\";\r\nsynth2 64.;\r\nprinter.thingy \"Value 64. sent.\";\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
+													"patching_rect" : [ 415.0, 190.0, 172.0, 133.0 ],
+													"text" : ";\r\nmypreset1 4;\r\n;\r\nsynth1 58.;\r\nprinter.thingy \"Value 58. sent.\";\r\nsynth2 64.;\r\nprinter.thingy \"Value 64. sent.\";\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
 												}
 
 											}
@@ -4265,13 +4265,13 @@
 , 											{
 												"box" : 												{
 													"id" : "obj-82",
-													"linecount" : 8,
+													"linecount" : 9,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 340.0, 187.0, 172.0, 119.0 ],
-													"text" : ";\r\nplay_sequenzer bang;\r\nsynth1 58.;\r\nprinter.thingy \"Value 58. sent.\";\r\nsynth2 64.;\r\nprinter.thingy \"Value 64. sent.\";\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
+													"patching_rect" : [ 340.0, 187.0, 172.0, 133.0 ],
+													"text" : ";\r\nmypreset1 1;\r\nplay_sequenzer bang;\r\nsynth1 58.;\r\nprinter.thingy \"Value 58. sent.\";\r\nsynth2 64.;\r\nprinter.thingy \"Value 64. sent.\";\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
 												}
 
 											}
@@ -5206,7 +5206,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 918.0, 569.0, 50.0, 22.0 ],
-									"text" : "4"
+									"text" : "1"
 								}
 
 							}
@@ -5738,7 +5738,7 @@
 							}
 , 							{
 								"box" : 								{
-									"addpoints" : [ 0.0, 0.0, 0, 260.638297872340445, 0.373333333333333, 0, 494.680851063829778, 0.84, 0, 776.595744680851112, 0.746666666666667, 0, 1000.0, 0.0, 0 ],
+									"addpoints" : [ 0.0, 0.0, 0, 260.638297872340445, 0.373333333333333, 0, 494.680851063829778, 0.84, 0, 776.595744680851112, 0.746666666666667, 0, 994.680851063829778, 0.066666666666667, 0 ],
 									"classic_curve" : 1,
 									"id" : "obj-27",
 									"maxclass" : "function",
@@ -6833,6 +6833,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-16", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-16", 1 ]
 				}
 
 			}
