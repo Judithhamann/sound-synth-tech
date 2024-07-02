@@ -46,6 +46,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
 					"patching_rect" : [ 582.0, 129.0, 50.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 519.0, 153.0, 50.0, 22.0 ],
 					"text" : "split 1 6"
 				}
 
@@ -58,6 +60,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 582.0, 84.0, 41.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 519.0, 116.0, 41.0, 22.0 ],
 					"text" : "r pitch"
 				}
 
@@ -70,7 +74,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 582.0, 187.0, 50.0, 22.0 ]
+					"patching_rect" : [ 582.0, 187.0, 50.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 519.0, 194.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -81,6 +87,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 582.0, 216.0, 74.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 519.0, 234.0, 74.0, 22.0 ],
 					"text" : "s mypreset1"
 				}
 
@@ -327,6 +335,8 @@
 					}
 ,
 					"patching_rect" : [ 175.0, 372.0, 71.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 175.0, 194.0, 71.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -346,7 +356,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 176.0, 506.0, 173.0, 22.0 ]
+					"patching_rect" : [ 176.0, 506.0, 173.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 175.0, 264.0, 76.75, 22.0 ]
 				}
 
 			}
@@ -357,6 +369,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 408.25, 349.0, 90.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 274.0, 205.5, 90.0, 20.0 ],
 					"text" : "rewind to event"
 				}
 
@@ -369,7 +383,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 409.25, 411.0, 50.0, 22.0 ]
+					"patching_rect" : [ 409.25, 411.0, 50.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 275.0, 245.5, 50.0, 22.0 ]
 				}
 
 			}
@@ -380,6 +396,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 513.25, 370.0, 74.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 379.0, 226.5, 74.0, 20.0 ],
 					"text" : "<live.menu>"
 				}
 
@@ -393,6 +411,8 @@
 					"outlettype" : [ "", "", "float" ],
 					"parameter_enable" : 1,
 					"patching_rect" : [ 409.25, 372.0, 100.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 275.0, 228.5, 100.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "INIT", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" ],
@@ -416,6 +436,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 176.0, 541.0, 88.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 175.0, 310.0, 88.0, 22.0 ],
 					"text" : "s current.event"
 				}
 
@@ -428,7 +450,9 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 363.25, 287.0, 24.0, 24.0 ]
+					"patching_rect" : [ 363.25, 287.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 275.0, 117.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -440,7 +464,9 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 297.75, 287.0, 24.0, 24.0 ]
+					"patching_rect" : [ 297.75, 287.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 226.0, 117.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -452,6 +478,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 298.0, 324.0, 29.5, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 223.25, 154.0, 29.5, 22.0 ],
 					"text" : "dec"
 				}
 
@@ -464,6 +492,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 374.0, 324.0, 29.5, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 275.0, 154.0, 29.5, 22.0 ],
 					"text" : "inc"
 				}
 
@@ -476,6 +506,8 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
 					"patching_rect" : [ 176.0, 469.0, 485.5, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 175.0, 238.0, 76.75, 22.0 ],
 					"text" : "counter"
 				}
 
@@ -488,7 +520,9 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 174.25, 293.0, 24.0, 24.0 ]
+					"patching_rect" : [ 174.25, 293.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 175.0, 117.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -547,7 +581,9 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 724.0, 496.0, 24.0, 24.0 ]
+					"patching_rect" : [ 724.0, 496.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 998.0, 97.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -570,6 +606,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 724.0, 435.0, 119.5, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 998.0, 36.0, 119.5, 47.0 ],
 					"text" : "PANIC!"
 				}
 
@@ -582,6 +620,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 724.0, 536.0, 47.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 998.0, 137.0, 47.0, 22.0 ],
 					"text" : "s panic"
 				}
 
@@ -609,6 +649,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 724.0, 102.0, 244.0, 324.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 22,
+					"presentation_rect" : [ 724.0, 36.0, 244.0, 324.0 ],
 					"text" : "CHECK LIST —\n1. turn on <ezdac> / <ezdac> anmachen\n2. Connect the USB-keyboard with the computer  / verbinde das Keyboard mit dem computer\n3. INIT! \n4.  Soundcheck of the keyboard / Klangtest\n5. Start piece (event #1)... and play the keyboard\n6. Start event #2 ... and play the keyboard\n7. Start event #3 ... and  play the k...\n8. Start event #2 ... and play the k...\n9. Start event #4 ...and play....\n10. Start event #5 \n11. Start event #6 \n12.  Set the 4. Preset\n13. Start event #8\n14. Repeat all steps from 6.\n15. Start event #7 after event #6\n15. Turn all things off.\n15. Done! :D\n",
 					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
 				}
@@ -893,7 +936,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-3",
@@ -1047,7 +1089,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-7",
-									"items" : "<empty>",
+									"items" : "Keystation Mini 32 MK3",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1209,6 +1251,8 @@
 					}
 ,
 					"patching_rect" : [ 11.0, 144.0, 60.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 144.0, 60.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1321,7 +1365,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1125.0, 269.0, 29.5, 22.0 ],
-									"text" : "1"
+									"text" : "2"
 								}
 
 							}
@@ -1393,7 +1437,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 850.0, 269.0, 29.5, 22.0 ],
-									"text" : "1"
+									"text" : "2"
 								}
 
 							}
@@ -1855,6 +1899,8 @@
 					}
 ,
 					"patching_rect" : [ 11.0, 197.0, 70.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 197.0, 70.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2298,6 +2344,8 @@
 					}
 ,
 					"patching_rect" : [ 11.0, 280.0, 68.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 280.0, 68.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2941,6 +2989,8 @@
 					}
 ,
 					"patching_rect" : [ 11.0, 118.0, 78.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 118.0, 78.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2997,7 +3047,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontface" : 2,
@@ -4031,7 +4080,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ -21292.0, -21249.0, 1167.0, 469.0 ],
+										"rect" : [ 75.0, 131.0, 1167.0, 469.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -4936,6 +4985,8 @@
 					}
 ,
 					"patching_rect" : [ 11.0, 170.0, 67.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 170.0, 67.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -5000,7 +5051,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 517.0, 588.0, 150.0, 34.0 ],
-									"presentation_linecount" : 2,
 									"text" : "<= duration (ms) of the \"note\""
 								}
 
@@ -5258,7 +5308,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 918.0, 569.0, 50.0, 22.0 ],
-									"text" : "1"
+									"text" : "4"
 								}
 
 							}
@@ -5790,7 +5840,7 @@
 							}
 , 							{
 								"box" : 								{
-									"addpoints" : [ 0.0, 0.0, 0, 404.255319148936167, 0.906666666666667, 0, 829.787234042553223, 0.146666666666667, 0, 1468.085106382978665, 0.88, 0, 4000.0, 0.0, 0 ],
+									"addpoints" : [ 0.0, 0.0, 0, 404.255319148936167, 0.906666666666667, 0, 1468.085106382978665, 0.88, 0, 4000.0, 0.0, 0 ],
 									"classic_curve" : 1,
 									"domain" : 4000.0,
 									"id" : "obj-27",
@@ -6624,6 +6674,8 @@
 					}
 ,
 					"patching_rect" : [ 11.0, 225.0, 43.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 225.0, 43.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -6877,6 +6929,8 @@
 					}
 ,
 					"patching_rect" : [ 11.0, 253.0, 48.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 253.0, 48.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
