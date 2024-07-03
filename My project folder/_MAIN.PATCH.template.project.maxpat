@@ -652,7 +652,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 22,
 					"presentation_rect" : [ 724.0, 36.0, 244.0, 324.0 ],
-					"text" : "CHECK LIST —\n1. turn on <ezdac> / <ezdac> anmachen\n2. Connect the USB-keyboard with the computer  / verbinde das Keyboard mit dem computer\n3. INIT! \n4.  Soundcheck of the keyboard / Klangtest\n5. Start piece (event #1)... and play the keyboard\n6. Start event #2 ... and play the keyboard\n7. Start event #3 ... and  play the k...\n8. Start event #2 ... and play the k...\n9. Start event #4 ...and play....\n10. Start event #5 \n11. Start event #6 \n12.  Set the 4. Preset\n13. Start event #8\n14. Repeat all steps from 6.\n15. Start event #7 after event #6\n15. Turn all things off.\n15. Done! :D\n",
+					"text" : "CHECK LIST —My order to perform:\n1. turn on <ezdac> / <ezdac> anmachen and turn down the volume a bit\n2. Connect the USB-keyboard with the computer  / verbinde das Keyboard mit dem computer\n3. INIT! \n4.  Soundcheck of the keyboard / Klangtest\n5. Start piece (event #1)... and play the keyboard\n6. Start event #2 ... and play the keyboard\n7. Start event #3 ... and  play the k...\n8. Start event #2 ... and play the k...\n9. Start event #4 ...and play....\n10. Start event #5 \n11. Start event #6 \n12. Start event  #7\n13. Repeat all steps from 6.\n14. Start event #8 \n15. Turn all things off.\n16. Done! :D\n",
 					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
 				}
 
@@ -1089,7 +1089,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-7",
-									"items" : "Keystation Mini 32 MK3",
+									"items" : "<empty>",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1365,7 +1365,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1125.0, 269.0, 29.5, 22.0 ],
-									"text" : "2"
+									"text" : "1"
 								}
 
 							}
@@ -1437,7 +1437,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 850.0, 269.0, 29.5, 22.0 ],
-									"text" : "2"
+									"text" : "1"
 								}
 
 							}
@@ -3049,6 +3049,134 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"id" : "obj-25",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 8,
+											"minor" : 6,
+											"revision" : 2,
+											"architecture" : "x64",
+											"modernui" : 1
+										}
+,
+										"classnamespace" : "box",
+										"rect" : [ 52.0, 84.0, 1213.0, 570.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Arial",
+										"gridonopen" : 1,
+										"gridsize" : [ 15.0, 15.0 ],
+										"gridsnaponopen" : 1,
+										"objectsnaponopen" : 1,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"lefttoolbarpinned" : 0,
+										"toptoolbarpinned" : 0,
+										"righttoolbarpinned" : 0,
+										"bottomtoolbarpinned" : 0,
+										"toolbars_unpinned_last_save" : 0,
+										"tallnewobj" : 0,
+										"boxanimatetime" : 200,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"style" : "",
+										"subpatcher_template" : "",
+										"assistshowspatchername" : 0,
+										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-82",
+													"linecount" : 9,
+													"maxclass" : "message",
+													"numinlets" : 2,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 340.0, 187.0, 200.0, 133.0 ],
+													"text" : ";\r\nplay_sequenzer bang;\r\nprinter.thingy \"Playlist is turned off.\";\r\nsynth1 58.;\r\nprinter.thingy \"Value 58. sent.\";\r\nsynth2 64.;\r\nprinter.thingy \"Value 64. sent.\";\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-83",
+													"index" : 1,
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 34.0, 87.0, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-84",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "bang", "bang" ],
+													"patching_rect" : [ 34.0, 131.0, 325.0, 22.0 ],
+													"text" : "b 3"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 2,
+													"fontname" : "Arial Bold Italic",
+													"id" : "obj-24",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 26.0, 34.0, 98.0, 34.0 ],
+													"text" : "Event 8\n",
+													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-84", 0 ],
+													"source" : [ "obj-83", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-82", 0 ],
+													"source" : [ "obj-84", 2 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 809.0, 246.0, 25.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"description" : "",
+										"digest" : "",
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p 8"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontface" : 2,
 									"id" : "obj-24",
 									"maxclass" : "comment",
@@ -3165,150 +3293,8 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 415.0, 190.0, 172.0, 133.0 ],
-													"text" : ";\r\nmypreset1 4;\r\n;\r\nsynth1 58.;\r\nprinter.thingy \"Value 58. sent.\";\r\nsynth2 64.;\r\nprinter.thingy \"Value 64. sent.\";\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"comment" : "",
-													"id" : "obj-83",
-													"index" : 1,
-													"maxclass" : "inlet",
-													"numinlets" : 0,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 54.0, 96.0, 30.0, 30.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-84",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 3,
-													"outlettype" : [ "bang", "bang", "bang" ],
-													"patching_rect" : [ 54.0, 140.0, 325.0, 22.0 ],
-													"text" : "b 3"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontface" : 2,
-													"fontname" : "Arial Bold Italic",
-													"id" : "obj-20",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 32.0, 57.0, 57.0, 20.0 ],
-													"text" : " Event 8",
-													"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
-												}
-
-											}
- ],
-										"lines" : [ 											{
-												"patchline" : 												{
-													"destination" : [ "obj-1", 0 ],
-													"source" : [ "obj-2", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-84", 0 ],
-													"source" : [ "obj-83", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-2", 0 ],
-													"source" : [ "obj-84", 1 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-82", 0 ],
-													"source" : [ "obj-84", 2 ]
-												}
-
-											}
- ]
-									}
-,
-									"patching_rect" : [ 809.0, 246.0, 25.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"tags" : ""
-									}
-,
-									"text" : "p 8"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-									"id" : "obj-20",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patcher" : 									{
-										"fileversion" : 1,
-										"appversion" : 										{
-											"major" : 8,
-											"minor" : 6,
-											"revision" : 2,
-											"architecture" : "x64",
-											"modernui" : 1
-										}
-,
-										"classnamespace" : "box",
-										"rect" : [ 98.0, 116.0, 1167.0, 469.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
-										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"assistshowspatchername" : 0,
-										"boxes" : [ 											{
-												"box" : 												{
-													"id" : "obj-82",
-													"linecount" : 3,
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 360.0, 196.0, 192.0, 77.0 ],
-													"text" : ";\r\nplay_sequenzer bang;\r\nprinter.thingy \"Playback is stoped\";\r\n"
+													"patching_rect" : [ 415.0, 190.0, 248.0, 133.0 ],
+													"text" : ";\r\nmypreset1 4;\r\nprinter.thingy \"Preset number 4 is activated.\";\r\nsynth1 58.;\r\nprinter.thingy \"Value 58. sent.\";\r\nsynth2 64.;\r\nprinter.thingy \"Value 64. sent.\";\r\nsynth3 67.;\r\nprinter.thingy \"Value 67. sent.\""
 												}
 
 											}
@@ -3354,8 +3340,22 @@
  ],
 										"lines" : [ 											{
 												"patchline" : 												{
+													"destination" : [ "obj-1", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-84", 0 ],
 													"source" : [ "obj-83", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"source" : [ "obj-84", 1 ]
 												}
 
 											}
@@ -3369,7 +3369,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 712.0, 246.0, 25.0, 22.0 ],
+									"patching_rect" : [ 711.125, 246.0, 25.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -4927,14 +4927,14 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-20", 0 ],
+									"destination" : [ "obj-21", 0 ],
 									"source" : [ "obj-1", 7 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-21", 0 ],
+									"destination" : [ "obj-25", 0 ],
 									"source" : [ "obj-1", 8 ]
 								}
 
@@ -6961,13 +6961,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-16", 4 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"source" : [ "obj-16", 1 ]
 				}
 
 			}
