@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1213.0, 570.0 ],
+		"rect" : [ 34.0, 77.0, 813.0, 570.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -852,40 +852,13 @@
 , 			{
 				"box" : 				{
 					"fontface" : 2,
-					"id" : "obj-72",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 36.0, 438.0, 20.0 ],
-					"text" : "for flute, baby elephant gurgles, miscellaneous combustibles, and live electronics",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-70",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 62.0, 354.0, 48.0 ],
-					"text" : "Composed by Taylor Swift (2022)\nMax patch designed by W.A. Mozart\nQuestions about running this patch? Email me: wa@mozart.com.",
-					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
 					"fontname" : "Arial Bold Italic",
 					"fontsize" : 20.0,
 					"id" : "obj-69",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 5.0, 198.0, 29.0 ],
+					"patching_rect" : [ 11.0, 29.0, 198.0, 29.0 ],
 					"text" : "MY MAGNUM OPUS",
 					"textcolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ]
 				}
@@ -4615,13 +4588,13 @@
 , 											{
 												"box" : 												{
 													"id" : "obj-6",
-													"linecount" : 13,
+													"linecount" : 15,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 634.5, 220.0, 241.0, 215.0 ],
-													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\nmainkeyboardgate 1;\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nprinter.thingy \"keyboard gate is open\";\r\nprinter.thingy \"DSP settings have been set\";\r\nmidi_ìnit bang;\r\nprinter.thingy \"MIDI settings have been set\";\r\n"
+													"patching_rect" : [ 634.5, 220.0, 241.0, 243.0 ],
+													"text" : ";\r\nprinter.thingy \"Starting INIT process...\";\r\nmainkeyboardgate 1;\r\ndsp iovs 1024;\r\ndsp sigvs 512;\r\ndsp takeover 0;\r\ndsp cpulimit 0;\r\ndsp sr 48000;\r\nmax preempt 1;\r\nduration1 4000;\r\nprinter.thingy \"keyboard gate is open\";\r\nprinter.thingy \"duration1 4000\";\r\nprinter.thingy \"DSP settings have been set\";\r\nmidi_ìnit bang;\r\nprinter.thingy \"MIDI settings have been set\";\r\n"
 												}
 
 											}
@@ -5043,7 +5016,20 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 508.0, 557.0, 66.0, 22.0 ],
+									"text" : "r duration1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-9",
 									"linecount" : 2,
@@ -6363,7 +6349,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-67", 0 ],
-									"midpoints" : [ 750.5, 444.0, 735.0, 444.0, 735.0, 573.0, 483.0, 573.0, 483.0, 591.0, 418.5, 591.0 ],
+									"midpoints" : [ 750.5, 444.0, 735.0, 444.0, 735.0, 543.0, 495.0, 543.0, 495.0, 588.0, 450.0, 588.0, 450.0, 618.0, 418.5, 618.0 ],
 									"order" : 1,
 									"source" : [ "obj-47", 0 ]
 								}
@@ -6504,6 +6490,13 @@
 									"destination" : [ "obj-54", 1 ],
 									"midpoints" : [ 422.5, 827.0, 384.0, 827.0, 384.0, 614.0, 282.0, 614.0 ],
 									"source" : [ "obj-69", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"source" : [ "obj-7", 0 ]
 								}
 
 							}
